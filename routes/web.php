@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\BlogController ;
 
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\TasController;
 
 
 
@@ -21,7 +22,7 @@ Route::get('halo', function () {
 	return "<h1>Halo, Selamat datang di tutorial laravel www.malasngoding.com</h1>";
 });
 
-Route::get('/', function () {
+Route::get('/home', function () {
 	return view('home');
 });
 
@@ -70,5 +71,13 @@ Route::post('/pegawai/store', [PegawaiDBController::class, 'store']); //jika for
 Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
-
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+
+Route::get('/tas', [TasController::class, 'index']);
+Route::get('/tas/tambah', [TasController::class, 'tambah']);
+Route::post('/tas/store', [TasController::class, 'store']); //jika form dikirim, route ini akan dijalankan
+Route::get('/tas/edit/{id}',[TasController::class, 'edit']);
+Route::post('/tas/update',[TasController::class, 'update']);
+Route::get('/tas/hapus/{id}', [TasController::class, 'hapus']);
+Route::get('/tas/cari', [TasController::class, 'cari']);
