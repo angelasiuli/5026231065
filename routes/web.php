@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController ;
 
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\TasController;
+use App\Http\Controllers\PageCounterController;
 
 
 
@@ -81,3 +82,5 @@ Route::get('/tas/edit/{id}',[TasController::class, 'edit']);
 Route::post('/tas/update',[TasController::class, 'update']);
 Route::get('/tas/hapus/{id}', [TasController::class, 'hapus']);
 Route::get('/tas/cari', [TasController::class, 'cari']);
+
+Route::get('/', [PageCounterController::class, 'index']);
