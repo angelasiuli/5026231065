@@ -45,10 +45,10 @@
             <li class="nav-item"><a class="nav-link" href="/home">All Front End</a></li>
             <li class="nav-item"><a class="nav-link" href="/pegawai">Pegawai</a></li>
             <li class="nav-item"><a class="nav-link" href="/kursi">Tugas CRUD</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">EAS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Latihan 1</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Latihan 2</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Latihan 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="/eas">EAS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/lat1">Latihan 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="karyawanlat2">Latihan 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="karyawanlat3">Latihan 3</a></li>
         </ul>
     </div>
 </nav>

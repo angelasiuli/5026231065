@@ -12,6 +12,9 @@ use App\Http\Controllers\PageCounterController;
 use App\Http\Controllers\Tugas2Controller;
 use App\Http\Controllers\Tugas3Controller;
 
+use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\MyKaryawanController;
+
 //import java.io
 
 // System.out.println("hello") kalo di php pake ::
@@ -97,3 +100,13 @@ Route::get('/karyawanlat3/tambah', [Tugas3Controller::class, 'tambah']);
 Route::post('/karyawanlat3/store', [Tugas3Controller::class, 'store']);
 Route::post('/karyawanlat3/update',[Tugas3Controller::class, 'update']);
 Route::get('/karyawanlat3/hapus/{id}', [Tugas3Controller::class, 'hapus']);
+
+Route::get('/keranjangbelanja',[KeranjangController::class,'index']);
+Route::get('/keranjangbelanja/beli', [KeranjangController::class, 'create']);
+Route::post('/keranjangbelanja/store', [KeranjangController::class, 'store']);
+Route::get('/keranjangbelanja/batal/{id}', [KeranjangController::class, 'destroy']);
+
+Route::get('/eas',[MyKaryawanController::class,'index']);
+Route::get('/eas/view/{kodepegawai}', [MyKaryawanController::class, 'view']);
+Route::get('/eas/edit/{kodepegawai}', [MyKaryawanController::class, 'edit']); // ✅ benar
+Route::post('/eas/update/{kodepegawai}', [MyKaryawanController::class, 'update']); // ✅ POST untuk form submit
